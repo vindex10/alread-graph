@@ -1,2 +1,7 @@
-{ "data": { "id": "a" } }
-{ "data": { "id": "b" } }
+{ "data": { "id": "web:scholarpedia.5230", "url": "http://dx.doi.org/10.4249/scholarpedia.5230", "title": "Bayesian statistics", "alias": "Scholarpedia: Bayesian statistics", "trello": "https://trello.com/c/ulFCDm2t/1-scholarpedia", "status": "read"} }
+{ "data": { "id": "slides:kroninger2013", "url": "http://hacol13.physik.uni-freiburg.de/graduiertenkolleg/talks/kroeninger_2013_05_15.pdf", "title": "An introduction to Bayesian reasoningin particle physics", "alias": "BAT Goetingen", "trello": "https://trello.com/c/XWYZtK0K/2-bat-gottingen", "status": "read"} }
+{ "data": { "id": "article:pdg-statistics", "url": "http://pdg.lbl.gov/2019/reviews/rpp2018-rev-statistics.pdf", "title": "PDG: Statistics", "trello": "https://trello.com/c/jJAfKiof/4-pdg-bayes", "status": "read"} }
+{ "data": { "id": "article:arxiv1201.1141", "url": "https://arxiv.org/pdf/1201.1141.pdf", "title": "A Problem in Particle Physics and Its Bayesian Analysis", "alias": "Lattice equation Baysian approach", "trello": "https://trello.com/c/pzYyNOZv/5-qcd", "status": "read"} }
+{ "data": { "id": "book:9781593279561", "url": "https://nostarch.com/learnbayes", "title": "Bayesian Statistics the Fun Way", "trello": "https://trello.com/c/K1pHxmGm/6-bayesian-statistics-the-fun-way", "status": "read"} }
+{ "data": { "id": "book:osti20004578", "url": "https://www.osti.gov/etdeweb/servlets/purl/20004578", "title": "Bayesian reasoning in HEP: principles and applications", "alias": "CERN: Bayes approach", "trello": "https://trello.com/c/I13QACn0/3-cern-bayes"} }
+{ "data": { "id": "article:doi10.2307/2683105", "url": "https://www.jstor.org/stable/2683105", "title": "Why Isn't Everyone a Bayesian? ", "alias": "Bayes: Statistician approach"} }

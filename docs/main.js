@@ -33869,10 +33869,10 @@ process.umask = function() { return 0; };
 const cytoscape = require("cytoscape")
 
 
-let nodes_raw = Buffer("eyAiZGF0YSI6IHsgImlkIjogImEiIH0gfQp7ICJkYXRhIjogeyAiaWQiOiAiYiIgfSB9Cg==","base64").toString();
+let nodes_raw = Buffer("eyAiZGF0YSI6IHsgImlkIjogIndlYjpzY2hvbGFycGVkaWEuNTIzMCIsICJ1cmwiOiAiaHR0cDovL2R4LmRvaS5vcmcvMTAuNDI0OS9zY2hvbGFycGVkaWEuNTIzMCIsICJ0aXRsZSI6ICJCYXllc2lhbiBzdGF0aXN0aWNzIiwgImFsaWFzIjogIlNjaG9sYXJwZWRpYTogQmF5ZXNpYW4gc3RhdGlzdGljcyIsICJ0cmVsbG8iOiAiaHR0cHM6Ly90cmVsbG8uY29tL2MvdWxGQ0RtMnQvMS1zY2hvbGFycGVkaWEiLCAic3RhdHVzIjogInJlYWQifSB9CnsgImRhdGEiOiB7ICJpZCI6ICJzbGlkZXM6a3JvbmluZ2VyMjAxMyIsICJ1cmwiOiAiaHR0cDovL2hhY29sMTMucGh5c2lrLnVuaS1mcmVpYnVyZy5kZS9ncmFkdWllcnRlbmtvbGxlZy90YWxrcy9rcm9lbmluZ2VyXzIwMTNfMDVfMTUucGRmIiwgInRpdGxlIjogIkFuIGludHJvZHVjdGlvbiB0byBCYXllc2lhbiByZWFzb25pbmdpbiBwYXJ0aWNsZSBwaHlzaWNzIiwgImFsaWFzIjogIkJBVCBHb2V0aW5nZW4iLCAidHJlbGxvIjogImh0dHBzOi8vdHJlbGxvLmNvbS9jL1hXWVp0SzBLLzItYmF0LWdvdHRpbmdlbiIsICJzdGF0dXMiOiAicmVhZCJ9IH0KeyAiZGF0YSI6IHsgImlkIjogImFydGljbGU6cGRnLXN0YXRpc3RpY3MiLCAidXJsIjogImh0dHA6Ly9wZGcubGJsLmdvdi8yMDE5L3Jldmlld3MvcnBwMjAxOC1yZXYtc3RhdGlzdGljcy5wZGYiLCAidGl0bGUiOiAiUERHOiBTdGF0aXN0aWNzIiwgInRyZWxsbyI6ICJodHRwczovL3RyZWxsby5jb20vYy9qSkFmS2lvZi80LXBkZy1iYXllcyIsICJzdGF0dXMiOiAicmVhZCJ9IH0KeyAiZGF0YSI6IHsgImlkIjogImFydGljbGU6YXJ4aXYxMjAxLjExNDEiLCAidXJsIjogImh0dHBzOi8vYXJ4aXYub3JnL3BkZi8xMjAxLjExNDEucGRmIiwgInRpdGxlIjogIkEgUHJvYmxlbSBpbiBQYXJ0aWNsZSBQaHlzaWNzIGFuZCBJdHMgQmF5ZXNpYW4gQW5hbHlzaXMiLCAiYWxpYXMiOiAiTGF0dGljZSBlcXVhdGlvbiBCYXlzaWFuIGFwcHJvYWNoIiwgInRyZWxsbyI6ICJodHRwczovL3RyZWxsby5jb20vYy9well5Tk9adi81LXFjZCIsICJzdGF0dXMiOiAicmVhZCJ9IH0KeyAiZGF0YSI6IHsgImlkIjogImJvb2s6OTc4MTU5MzI3OTU2MSIsICJ1cmwiOiAiaHR0cHM6Ly9ub3N0YXJjaC5jb20vbGVhcm5iYXllcyIsICJ0aXRsZSI6ICJCYXllc2lhbiBTdGF0aXN0aWNzIHRoZSBGdW4gV2F5IiwgInRyZWxsbyI6ICJodHRwczovL3RyZWxsby5jb20vYy9LMXBIeG1HbS82LWJheWVzaWFuLXN0YXRpc3RpY3MtdGhlLWZ1bi13YXkiLCAic3RhdHVzIjogInJlYWQifSB9CnsgImRhdGEiOiB7ICJpZCI6ICJib29rOm9zdGkyMDAwNDU3OCIsICJ1cmwiOiAiaHR0cHM6Ly93d3cub3N0aS5nb3YvZXRkZXdlYi9zZXJ2bGV0cy9wdXJsLzIwMDA0NTc4IiwgInRpdGxlIjogIkJheWVzaWFuIHJlYXNvbmluZyBpbiBIRVA6IHByaW5jaXBsZXMgYW5kIGFwcGxpY2F0aW9ucyIsICJhbGlhcyI6ICJDRVJOOiBCYXllcyBhcHByb2FjaCIsICJ0cmVsbG8iOiAiaHR0cHM6Ly90cmVsbG8uY29tL2MvSTEzUUFDbjAvMy1jZXJuLWJheWVzIn0gfQp7ICJkYXRhIjogeyAiaWQiOiAiYXJ0aWNsZTpkb2kxMC4yMzA3LzI2ODMxMDUiLCAidXJsIjogImh0dHBzOi8vd3d3LmpzdG9yLm9yZy9zdGFibGUvMjY4MzEwNSIsICJ0aXRsZSI6ICJXaHkgSXNuJ3QgRXZlcnlvbmUgYSBCYXllc2lhbj8gIiwgImFsaWFzIjogIkJheWVzOiBTdGF0aXN0aWNpYW4gYXBwcm9hY2gifSB9Cg==","base64").toString();
 let nodes = nodes_raw.trim("\n").split("\n").map(JSON.parse);
 
-let edges_raw = Buffer("eyAiZGF0YSI6IHsgImlkIjogImFiIiwgInNvdXJjZSI6ICJhIiwgInRhcmdldCI6ICJiIiB9IH0K","base64").toString();
+let edges_raw = Buffer("eyJkYXRhIjogeyJpZCI6ICJhcnRpY2xlOnBkZy1zdGF0aXN0aWNzQGFydGljbGU6ZG9pMTAuMjMwNy8yNjgzMTA1IiwgInNvdXJjZSI6ICJhcnRpY2xlOnBkZy1zdGF0aXN0aWNzIiwgInRhcmdldCI6ICJhcnRpY2xlOmRvaTEwLjIzMDcvMjY4MzEwNSJ9fQo=","base64").toString();
 let edges = edges_raw.trim("\n").split("\n").map(JSON.parse);
 
 console.log(nodes);
@@ -33892,8 +33892,15 @@ var cy = cytoscape({
     {
       selector: 'node',
       style: {
-        'background-color': '#666',
-        'label': 'data(id)'
+        'background-color': function (node) {
+            let status = node.data("status")
+            return  status == "read" ? "#7a7" : "#aaa";
+        },
+        'label': function (node) {
+            let type = node.data("id").split(":")[0]
+            let title = node.data("alias") ? node.data("alias") : node.data("title");
+            return type + "/" + title
+        },
       }
     },
 
@@ -33901,18 +33908,19 @@ var cy = cytoscape({
       selector: 'edge',
       style: {
         'width': 3,
+        'curve-style': 'straight',
         'line-color': '#ccc',
         'target-arrow-color': '#ccc',
         'target-arrow-shape': 'triangle'
       }
     }
-  ],
+  ]
 
-  layout: {
-    name: 'grid',
-    rows: 1
-  }
+});
 
+cy.nodes().on('click', function(e){
+  var ele = e.target;
+  alert(JSON.stringify(ele.data(), null, 2));
 });
 
 }).call(this,require("buffer").Buffer)

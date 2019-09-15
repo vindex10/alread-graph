@@ -24,8 +24,15 @@ var cy = cytoscape({
     {
       selector: 'node',
       style: {
-        'background-color': '#666',
-        'label': 'data(id)'
+        'background-color': function (node) {
+            let status = node.data("status")
+            return  status == "read" ? "#7a7" : "#aaa";
+        },
+        'label': function (node) {
+            let type = node.data("id").split(":")[0]
+            let title = node.data("alias") ? node.data("alias") : node.data("title");
+            return type + "/" + title
+        },
       }
     },
 
@@ -33,16 +40,17 @@ var cy = cytoscape({
       selector: 'edge',
       style: {
         'width': 3,
+        'curve-style': 'straight',
         'line-color': '#ccc',
         'target-arrow-color': '#ccc',
         'target-arrow-shape': 'triangle'
       }
     }
-  ],
+  ]
 
-  layout: {
-    name: 'grid',
-    rows: 1
-  }
+});
 
+cy.nodes().on('click', function(e){
+  var ele = e.target;
+  alert(JSON.stringify(ele.data(), null, 2));
 });

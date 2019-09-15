@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist; cp -r static/ dist/; browserify -t brfs src/index.js -o dist/main.js",
+    "pages": "rm -rf docs; cp -r static/ docs/; browserify -t brfs src/index.js -o docs/main.js",
     "clean": "rm -rf dist/",
     "start": "budo -v --live --open --dir=static/ src/index.js:main.js -- -t brfs"
   },
