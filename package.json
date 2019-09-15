@@ -1,0 +1,23 @@
+{
+  "name": "alread",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist; cp -r static/ dist/; browserify -t brfs src/index.js -o dist/main.js",
+    "clean": "rm -rf dist/",
+    "start": "budo -v --live --open --dir=static/ src/index.js:main.js -- -t brfs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "brfs": "^2.0.2",
+    "browserify": "^16.5.0",
+    "browserify-string": "^1.1.1",
+    "budo": "^11.6.3",
+    "cytoscape": "^3.10.0",
+    "watchify": "^3.11.1"
+  },
+  "devDependencies": {}
+}
