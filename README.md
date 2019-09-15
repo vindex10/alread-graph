@@ -37,3 +37,36 @@ category extracted from id.
 ```
 {"data": {"id": "<entity id>", "source": "<source node id>", "target": "<target node id>"}}
 ```
+
+## Build
+
+```
+npm run build
+```
+
+Result will be stored in `dist/` folder
+
+
+## Development mode
+
+```
+npm start
+```
+
+Starts development server which will continuously build the app. You can use it on regular basis as well to see
+the graph updates immediately.
+
+## Commit & Push
+
+You can use `npm run pages` to build `docs/` dir. It is the same as `build`, and used for Github Pages. You can put it
+as a pre-commit hook:
+
+.git/hooks/pre-commit
+
+```
+#!/bin/sh
+
+npm run pages
+```
+
+this will re-build docs each time you commit, to be sure Pages have up to date graph.
