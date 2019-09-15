@@ -21,10 +21,15 @@ Both files are multiline jsons. Each line represents entity.
 * `data/nodes.json`
 
 ```
-{"data": {"id": "<node id>", "title": "<long title>", "alias": "<show instead of title>", "status": "read|<your status>"}}
+{"data": {"id": "<node id. format category:id>", "title": "<long title>", "alias": "<show instead of title>", "status": "read|<your status>"}}
 ```
 
-if `status` is `read`, nodes will be colored in green.
+#### Note
+
+* Format of id **requires** category
+* If `status` is `read`, nodes will be colored in green.
+* If `alias` is present, it is used to describe node, otherwise `title` is used. Moreover, title/alias being prefixed with
+category extracted from id.
 
 
 * `data/edges.json`
