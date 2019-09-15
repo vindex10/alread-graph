@@ -18,21 +18,21 @@ npm install
 
 Both files are multiline jsons. Each line represents entity.
 
-* `data/nodes.json`
+#### Nodes: `data/nodes.json`
 
 ```
 {"data": {"id": "<node id. format category:id>", "title": "<long title>", "alias": "<show instead of title>", "status": "read|<your status>"}}
 ```
 
-#### Note
+**Note**
 
-* Format of id **requires** category
+* Format of id *requires* category
 * If `status` is `read`, nodes will be colored in green.
 * If `alias` is present, it is used to describe node, otherwise `title` is used. Moreover, title/alias being prefixed with
 category extracted from id.
 
 
-* `data/edges.json`
+#### Edges: `data/edges.json`
 
 ```
 {"data": {"id": "<entity id>", "source": "<source node id>", "target": "<target node id>"}}
