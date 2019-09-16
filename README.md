@@ -67,6 +67,7 @@ as a pre-commit hook:
 #!/bin/sh
 
 npm run pages
+git add docs/
 ```
 
 this will re-build docs each time you commit, to be sure Pages have up to date graph.
